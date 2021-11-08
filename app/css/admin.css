@@ -1,0 +1,306 @@
+html,body{
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    height: 100%;
+    width: 100%;
+}
+
+/* Contenedor general */
+
+.container{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    color: inherit;
+    font-family: 'Montserrat', sans-serif;
+}
+
+a{
+    text-decoration: none;
+    color: white;
+}
+
+header{
+    flex-basis: 20%;
+    background-color: #58AF9B;
+    color: white;
+    padding: 0 0.5em;
+}
+
+header .index{
+    width: 80%;
+    margin: 2em auto 4em;
+    color: white;
+    display: flex;
+    align-items: center;
+}
+.index img{
+    width: 90%;
+    max-width: 180px;
+}
+
+.section{
+    border: 1px solid white;
+    display: flex;
+    align-items: center;
+    width: 80%;
+    margin: 4em auto 0;
+    padding: 0 0.2em;
+    border-radius: 5px;
+}
+
+.sfood{
+    margin-top: 1em;
+    cursor: pointer;
+}
+
+.sfood:hover{
+    background-color: #95CCBF;
+}
+
+.sexe{
+    margin-top: 1em;
+    cursor: pointer;
+}
+
+.sexe:hover{
+    background-color: #95CCBF;
+}
+
+.section img{
+    max-width: 40px;
+}
+
+.section p{
+    padding:0;
+    margin: 0 0 0 20px;
+}
+
+.content{
+    /* width: 90%; */
+    background-color: #F3F9F8;
+    padding: 0em 2em 0 4em;
+    flex-basis: 80%;
+    display: grid;
+    grid-template-areas: 'head head log'
+                         'info info info'
+                         'form form form' 
+                         'form form form' 
+                         'form form form'
+                         'form form form'
+                         'form form form';
+    justify-content: space-around;
+    align-items: center;
+    box-shadow: 0 0 0.4em rgba(0,0,0,0.2);
+    /* margin: 0 auto; */
+    /* color: white; */
+    /* border: 1px solid white; */
+}
+
+.content h2{
+    grid-area: head;
+    color: #58AF9B;
+}
+
+.content a{
+    grid-area: log;
+}
+
+.content .logout img{
+    max-width: 50px;
+}
+
+.content .info{
+    grid-area:info;
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: space-evenly;
+}
+
+.content .card{
+    width: fit-content;
+    padding: 0 1em;
+    background-color: white;
+    border: 1px solid #DCEEEA;
+    display: grid;
+    grid-gap: 0 20px;
+    grid-template-areas: 
+    '. tit tit'
+    'img tit tit'
+    'img tit tit'
+    'img res res'
+    'img res res'
+    '. res res';
+    border-radius: 5px;
+}
+
+.card img{
+    grid-area: img;
+    border-radius: 50%;
+    max-width: 50px;
+    background-color: #D0E8E3;
+    padding: 5px;
+}
+
+.card .tit{
+    grid-area: tit;
+    font-size: 0.9em;
+    position: relative;
+    top: 10px
+}
+
+.card .count{
+    grid-area: res;
+    text-align: center;
+    font-weight: bold;
+    position: relative;
+    top: -10px
+}
+
+.content h4{
+    grid-area: subt;
+}
+
+.content .form{
+    height: 80%;
+    /* flex-direction: column; */
+    grid-area: form;
+    background-color: white;
+    border: 1px solid #DCEEEA;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-radius: 5px;
+    /* margin-bottom: 2em; */
+}
+
+.form .add-food{
+    display: flex;
+    flex-direction: column;
+}
+
+.form .add-exercise{
+    display: flex;
+    flex-direction: column;
+}
+
+.form .add-exercise{
+    display: none;
+}
+
+.form h4{
+    text-align: center;
+    color: #58AF9B;
+    padding: 0;
+}
+
+.content form input{
+    font-family: 'Montserrat', sans-serif;
+    border: none;
+    border-bottom: 1px solid #D0E8E3;
+    /* background-color: #F3F9F8; */
+    display: block;
+    padding: 0.8em 0.5em;
+    width: 65%;
+    margin: 0.2em auto 0.4em;
+    outline: none !important;
+    border-radius: 0.2em;
+    
+}
+
+.content form button{
+    font-family: 'Montserrat', sans-serif;
+    margin: 2em auto;
+    width: auto;
+    background-color: inherit;
+    display: block;
+    padding: 0.5em 1em;
+    border: 1px solid #95CCBF;
+    color: #58AF9B;
+    border-radius: 2em;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.del-food{
+    height: 55vh;
+    /* border: 1px solid black; */
+    overflow-x: hidden;
+    overflow-y: scroll;
+    display: none;
+}
+
+.del-ex{
+    height: 55vh;
+    /* border: 1px solid black; */
+    overflow-x: hidden;
+    overflow-y: scroll;
+    display: none;
+}
+
+.data{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 80%;
+    margin: 0 auto;
+    justify-content: space-between;
+    border-bottom: 1px solid #D0E8E3;
+}
+.data h4{
+    text-align: left;
+}
+
+.data p{
+    display: none;
+}
+
+.data img{
+    max-width: 20px;
+    cursor: pointer;
+    border-radius: 50%;
+}
+
+.data img:hover{
+    background-color: #641220;
+}
+
+.data:first-child{
+    margin-top: 1em;
+}
+
+::-webkit-scrollbar-track
+{
+	border-radius: 0px;
+	background-color: #D0E8E3;
+}
+
+::-webkit-scrollbar
+{
+	width: 12px;
+	background-color: #F5F5F5;
+}
+
+::-webkit-scrollbar-thumb
+{
+	border-radius: 10px;
+	background-color: #A1D2C6;
+}
+
+/* Ajustes para pantallas pequeñas */
+@media screen and (max-width: 700px){
+
+    header{
+        display: none;
+    }
+    .content{
+        flex-basis: 100%;
+        padding: 1em;
+    }
+
+    .content .info{
+        width: 100%;
+    }
+}

@@ -1,0 +1,205 @@
+/* fecha */
+.registro-diario form{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+/* colocacion de los elementos */
+.flex{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+/* canvas */
+.canva, .datos-informe{
+    width: 45%;
+}
+
+#myCanvas{
+  width: 100%;
+  margin: 0 auto;
+  display: block;
+}
+
+/* Legenda del canvas */
+.canva .lege {
+    width: 100%;
+}
+
+.canva .lege ul {
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 0;
+    padding: 0;    
+}
+
+.lege ul li {
+    margin: 0px 4%;
+}
+
+.datos-informe{
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+}
+
+.calculos-informes{
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  /* border: 1px solid black; */
+}
+
+.calculos-informes .progressDiv{
+  margin: 0;
+}
+/* Grafica circular */
+
+.progressDiv {
+    /* width: 84%; */
+    background: inherit;
+    height: fit-content;
+    margin: 0 auto;
+    /* border: 1px solid black; */
+}
+
+.progressDiv p{
+  text-align: center;
+  font-size: 1.2em;
+  margin: 0.3em 0 0 0;
+}
+    
+/* Pie Chart */
+.progress-pie-chart {
+  width:150px;
+  height: 150px;
+  border-radius: 50%;
+  background-color: inherit;
+  position: relative;
+}
+
+.progress-pie-chart.gt-50 {
+  background-color: #81CE97;
+}
+
+.progress-pie-chart.gt-0 {
+  background-color: #D0E8E3;
+}
+
+.progress-pie-chart.gt-100 {
+  background-color: #fcb75d;
+}
+
+.progress-pie-chart.gt-200 {
+  background-color: #e5383b;
+}
+
+.ppc-progress {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  left: calc(50% - 75px);
+  top: calc(50% - 75px);
+  width: 150px;
+  height: 150px;
+  clip: rect(0, 150px, 150px, 75px);
+}
+
+.ppc-progress .ppc-progress-fill {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  left: calc(50% - 75px);
+  top: calc(50% - 75px);
+  width: 150px;
+  height: 150px;
+  clip: rect(0, 75px, 150px, 0);
+  background: #81CE97;
+  transform: rotate(deg);
+}
+
+.gt-50 .ppc-progress {
+  clip: rect(0, 75px, 150px, 0);
+}
+
+.gt-50 .ppc-progress .ppc-progress-fill {
+  clip: rect(0, 150px, 150px, 75px);
+  background: #D0E8E3;
+}
+    
+.ppc-percents {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  left: calc(50% - 115.9420267px/2);
+  top: calc(50% - 115.9420267px/2);
+  width: 115.9420267px;
+  height: 115.9420267px;
+  background: white;
+  text-align: center;
+  display: table;
+}
+
+.ppc-percents span {
+  display: flex;
+  flex-direction: column;
+  font-size: 1.5em;
+  font-weight: bold;
+  color: #81CE97;
+}
+
+.ppc-percents span p{
+  margin: 0;
+}
+    
+.pcc-percents-wrapper {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+/* romper en formato movil */
+@media screen and (max-width: 770px) {
+
+  .flex,
+  .table2,
+  .canva .lege ul {
+        flex-direction: column;
+  }
+
+  .canva {
+    width: 100%;
+    margin-bottom: 50px;
+  }
+
+  .datos-informe {
+    width: 100%;
+  }
+
+  .datos-informe table {
+    margin-bottom: 20px;
+  }
+
+  .table2 table{
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 770px) {
+
+  .calculos-informes{
+    flex-direction: column;
+  }
+
+  .calculos-informes .progressDiv{
+    margin: 0.5em auto;
+  }
+
+  .progressDiv{
+    margin: 0.5em auto;
+  }
+
+}

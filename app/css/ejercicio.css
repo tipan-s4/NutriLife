@@ -1,0 +1,183 @@
+/* Ejercicio php */
+
+.ejercicios{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 0;
+    margin: 5px 0;
+} 
+.ejercicios .nombre{
+  margin: 0;
+  font-size: 0.9em;
+}
+
+.ejercicios .datos{
+  width: 280px;
+  display: flex;
+  align-items: center;
+  margin: 10px 0;
+  padding: 0;
+  position: relative;
+}
+
+.datos .idejercicio{
+  display: none;
+}
+
+.ejercicios .datos p{
+  /* margin: auto 2.1em; */
+  width: 40px;
+  text-align: center;
+  margin: 0;
+  font-size: 0.9em;
+  padding:  0;
+}
+
+.ejercicios .pcalorias{
+  position: absolute;
+  left: 30px;
+}
+
+.ejercicios .pminutos{
+  position: absolute;
+  left: 105px;
+}
+
+.ejercicios .ptotal{
+  position: absolute;
+  left: 190px;
+}
+
+.ejercicios .datos img{
+  max-width: 25px;
+  left: 255px;
+}
+
+
+.ejercicios .bottom{
+  order: 1;
+  flex:1 0 100%;
+  border-bottom: 1px solid #DCEEEA;
+}
+
+.add .add-ex{
+  font-size: 0.8;
+  color: #3cbb95;
+  cursor: pointer;
+}
+
+.search-exercise{
+  /* border: 1px solid black; */
+  display: flex;
+}
+
+.search-exercise .wrapper{
+  /* border: 1px solid black; */
+  display: none;
+  margin: 0;
+  width: 280px;
+}
+
+/* Search.php */
+
+.table-exercise{
+  border-radius: 5px;
+    border: 1px solid #B8DDD4;
+    width: fit-content;
+    margin: 2em 0;
+    padding: 1em 3em 0 3em;
+}
+
+.table-exercise >*{
+    display: table-row;
+    margin: 0;
+    /* border: 1px solid #B8DDD4; */
+    padding: 0;
+}
+
+.table-exercise >*>*{
+  display: table-cell; 
+  text-align: center;
+  padding: 0 2em;
+}
+
+.table-exercise input{
+  font-family: 'Montserrat', sans-serif;
+  border: none;
+  background-color: inherit;
+  color: inherit;
+  outline: none !important;
+  border-bottom: 1px solid #B8DDD4;
+  width: 40%;
+  text-align: center;
+}
+
+.table-exercise-tit{
+  display: none;
+}
+
+@media screen and (max-width: 850px){
+
+  .table-exercise >*>*{
+    padding: 0 0.5em;
+  }
+
+}
+
+/* Ajustes para pantallas pequeñas */
+@media screen and (max-width: 600px){
+
+  .table-exercise{
+    display: flex;
+    flex-direction: column;
+    font-size: 0.9em;
+    padding: 1em;
+  }
+
+  .table-exercise >*{
+    display: flex;
+    flex-direction: column;
+    margin: 0 0 2em 0;
+    border-bottom: 1px solid #B8DDD4;
+    padding-bottom: 2em;
+  }
+
+  .table-exercise >*>*{
+    display: flex; 
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 0.4em;
+    text-align: center;
+    /* margin: 0 2em; */
+  }
+
+  .table-exercise-header{
+    display: none;
+  }
+
+  .table-exercise-tit{
+    display: inline-block;
+  }
+
+  .ejercicios .pcalorias{
+    position: absolute;
+    left: 15px;
+  }
+  
+  .ejercicios .pminutos{
+    position: absolute;
+    left: 90px;
+  }
+  
+  .ejercicios .ptotal{
+    position: absolute;
+    left: 170px;
+  }
+  
+  .ejercicios .datos img{
+    max-width: 25px;
+    left: 240px;
+  }
+}

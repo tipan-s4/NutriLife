@@ -1,0 +1,415 @@
+/* alimentos.php */
+
+.registro-diario{
+    display: flex;
+    align-items: center;
+    width: fit-content;
+    flex-wrap: wrap;
+    margin: 0.5em 0 1em 0;
+}
+
+.registro-diario h4{
+    margin: 0 2em 0 0;
+}
+
+.registro-diario h4 form{
+    margin: 0;
+    padding: 0;
+}
+
+.add a{
+    text-decoration: none;
+    color: #3cbb95;
+    width: fit-content;
+}
+
+.add{
+    width: 90%;
+    /* margin: 0 auto; */
+}
+
+.desayuno .tit{
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    flex-wrap: wrap;
+}
+
+.add h3{
+    font-size: 1.4em;
+}
+
+.desayuno .tit div{
+    display: flex;
+    font-size: 0.9em;
+    /* margin: 0 2em; */
+}
+
+.tit div p{
+    margin:  auto 0.1em;
+    padding: 0.3em 0.5em;
+    background-color: #3cbb95;
+    border-radius: 2px;
+    color: white;
+}
+
+.tit p:last-child{
+    margin-right: 28px;
+}
+
+.alimentos{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 0;
+    margin: 5px 0;
+} 
+
+.alimentos .nombre{
+    margin: 0;
+    font-size: 0.9em;
+}
+
+.alimentos .datos{
+    width: 350px;
+    display: flex;
+    align-items: center;
+    margin: 10px 0;
+    padding: 0;
+    position: relative;
+}
+
+.alimentos .datos p{
+    /* margin: auto 2.2em; */
+    width: 40px;
+    text-align: center;
+    margin: 0;
+    font-size: 0.9em;
+    padding:  0;
+}
+
+.alimentos .pcalorias{
+    position: absolute;
+    left: 35px;
+}
+
+.alimentos .phidratos{
+    position: absolute;
+    left: 110px;
+}
+
+.alimentos .pproteinas{
+    position: absolute;
+    left: 195px;
+}
+
+.alimentos .pgrasas{
+    position: absolute;
+    left: 270px;
+}
+
+.datos .idalimento{
+    display: none;
+}
+
+.datos img{
+    max-width: 25px;
+    cursor: pointer;
+    position: absolute;
+    left: 330px;
+}
+
+.alimentos .bottom{
+    order: 1;
+    flex:1 0 100%;
+    border-bottom: 1px solid #DCEEEA;
+}
+
+/* Search.php */
+
+.search-flex{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-content: center;
+    justify-content: space-between;
+}
+
+.copy-food{
+    flex-basis: 45%;
+}
+
+.resultado{
+    flex-basis: 50%;
+    height: max-content;
+    padding: 0 0 0 1em;
+    border: 1px solid #B8DDD4;
+    border-radius: 5px;
+}
+
+.resultado form{
+    display: none;
+}
+
+.food{
+    /* width: 33%; */
+    font-size: 0.9em;
+}
+
+.resultados{
+    display: none;
+}
+
+.preview{
+    cursor: pointer;
+}
+
+.preview:hover{
+    padding-left: 0.6em;
+}
+
+.preview h4{
+    margin: 0.5em 0;
+    padding: 0;
+}
+
+.preview p{
+    margin: 0;
+    padding: 0 0 0.2em 0;
+    font-size: 0.9em;
+    border-bottom: 1px solid #B8DDD4;
+}
+
+.copy-food .resultados{
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    border: 1px solid #B8DDD4;
+    text-align: center;
+    font-size: 0.9em;
+    padding: 0.5em;
+    border-radius: 5px;
+}
+
+.resultados .tit h4{
+    margin: 0 0 0.5em 0;
+    padding: 0;
+}
+
+.resultados .data-search {
+    display: flex;
+    flex-wrap: wrap;
+    border-radius: 5px;
+    justify-content: center;
+}
+
+.resultados p{
+    border-right: 1px solid #B8DDD4;
+    margin: 0.2em 0;
+    padding:0 0.5em;
+}
+
+
+.resultados p:last-child{
+    border: none;
+}
+
+.copy-food form{
+    display: block;
+    width: 90%;
+    margin: 1em auto;
+}
+
+.copy-food form input{
+    font-family: 'Montserrat', sans-serif;
+    border: none;
+    background-color: inherit;
+    color: inherit;
+    outline: none !important;
+    border-bottom: 1px solid #B8DDD4;
+    width: 190px;
+    /* width: 50%; */
+}
+
+.copy-food form p{
+    color: #58AF9B;
+    cursor: pointer;
+    display: none;
+}
+
+.botonEnviar{
+    font-family: 'Montserrat', sans-serif;
+    width: fit-content;
+    height: fit-content;
+    background-color: #58AF9B;
+    color: white;
+    padding: 0.6em 0.9em;
+    border: none;
+    border-radius: 2em;
+    cursor: pointer;
+    font-weight: bold;
+    box-shadow: 0.1em 0.3em 0.3em rgba(0,0,0,0.2);
+}
+
+.botonEnviar:hover{
+    color: #3cbb95;
+    background-color: #ffffff;
+}
+
+
+
+/* Buscar alimentos */
+
+.add-image-ali{
+    background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url(../images/food.jpg);
+    background-size: cover;
+     background-position: center; 
+    background-repeat: none;
+    width: 100%;
+    height: fit-content;
+    box-shadow: 5px 6px 10px 7px rgba(0,0,0,0.5);
+    color: #DBDBDB;
+}
+
+.search-food .titulo h3{
+    text-align: center;
+}
+
+.wrapper{
+    margin: 2em auto ;
+    width: 30%;
+    /* background: #DFDFDF; */
+    border-radius: 5px;
+}
+
+.wrapper .search-input{
+    background: #DFDFDF;
+    width: 100%;
+    width: auto;
+    border-radius: 5px;
+    position: relative;
+    box-shadow: 0px 1px 5px 3px rgba(0,0,0,0.12);
+}
+
+.search-input input{
+    font-family: 'Montserrat', sans-serif;
+    height: 2em;
+    width: 100%;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    /* padding: 0 0 0 20px; */
+    padding-left: 10px;
+    font-size: 0.9em;
+    box-shadow: 0px 1px 5px rgba(0,0,0,0.1);
+}
+
+.wrapper ul{
+    margin: 0 auto;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+} 
+
+.wrapper li{
+    margin: 0;
+    list-style: none;
+    color: #929292;
+    width: 100%;
+    border-radius: 5px;
+    padding: 5px 5px;
+    background-color: #DFDFDF;
+}
+
+.wrapper li:hover{
+    background: #efefef;
+}
+
+.search-input .icon{
+    position: absolute;
+    right: 0;
+    top: 3px;
+    background-image: url(../images/search2.png);
+    background-size: cover;
+    background-position: center;
+    height: 25px;
+    width: 25px;
+    cursor: pointer;
+}
+
+.db-alimentos{
+    width: fit-content;
+    margin: 0 auto;
+}
+
+.db-alimentos div{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.db-alimentos label{
+    margin: 0 0.5em;
+}
+
+.db-alimentos button{
+    font-family: 'Montserrat', sans-serif;
+    margin: 1.5em auto ;
+    width: auto;
+    background-color: inherit;
+    display: block;
+    padding: 0.5em 1em;
+    border: 1px solid#DBDBDB;
+    color: inherit;
+    border-radius: 2em;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+@media screen and (max-width: 600px){
+
+    .search-flex{
+        flex-direction: column;
+    }
+
+    .copy-food{
+        margin-top: 2em;
+        width: 100%;
+    }
+
+    .resultado{
+        width: 100%;
+    }
+
+
+    .alimentos .pcalorias{
+        left: 15px;
+    }
+    
+    .alimentos .phidratos{
+        left: 95px;
+    }
+    
+    .alimentos .pproteinas{
+        left: 175px;
+    }
+    
+    .alimentos .pgrasas{
+        left: 250px;
+    }
+
+    .datos img{
+        left: 295px;
+    }
+
+    .copy-food form p{
+        display: block;
+    }
+    .copy-food{
+        display: none;
+    }
+}

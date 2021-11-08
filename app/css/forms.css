@@ -1,0 +1,156 @@
+/* Clases para el formulario */
+
+input + p{
+    font-family: arial;
+    font-size: 0.8em;
+    font-weight: bold;
+    margin: 0 2em;
+    color: #C26865;
+    opacity: 0;
+    height: 0;
+  }
+  input.invalid +p{
+    opacity: 1;
+    height: auto;
+  }
+  .register  input.valid{
+    border-color: green;
+  }
+  
+  .register  input.invalid{
+    border-color: #EC1D18;
+  }
+  
+  .register .msg p{
+    color: grey;
+  }
+  /* Estilo del formulario */
+  
+  .main-forms{
+    width: 75%;
+    margin: 2em auto;
+    display: flex;
+    border-radius: 1em;
+    height: 70vh;
+    box-shadow: 5px 10px 20px 10px rgba(0, 0, 0, 0.15);
+  }
+  
+  .card{
+    flex-basis: 35%;
+    border-top-left-radius: 1em;
+    border-bottom-left-radius: 1em;
+    background: rgb(88,175,155);
+    background: linear-gradient(90deg, rgba(88,175,155,1) 0%, rgba(60,187,149,1) 100%);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    box-shadow: 5px 0px 20px 10px rgba(0, 0, 0, 0.15);
+  }
+  
+  .back{
+    border-top-left-radius: 0em;
+    border-bottom-left-radius: 0;
+    border-top-right-radius: 1em;
+    border-bottom-right-radius: 1em;
+    box-shadow: -5px 0px 25px 8px rgba(0, 0, 0, 0.15);
+  }
+  
+  .card div{
+    width: 70%;
+    height: 50%;
+    margin: -30px auto 0;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+  }
+  
+  .card p{
+    text-align:center;
+  }
+
+  .card a{
+    width: fit-content;
+    margin: 0 auto;
+    padding: 0.8em 1.5em;
+    border: 1px solid white;
+    text-decoration: none;
+    color: white;
+    border-radius: 2em;
+    font-weight: bold;
+    font-size: 0.9em;
+  }
+  
+  .register{
+    flex-basis: 65%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+  .register h2{
+    width: 60%;
+    margin: 1.2em auto 2em;
+  }
+  
+  .login h2{
+    width: 60%;
+    margin: 1.2em auto 1em;
+  }
+
+  .register form{
+    /* width: 100%; */
+    text-align: center;
+    height: fit-content;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+  }
+  
+  .login form{
+    height: fit-content;
+  }
+  
+  .register  input {
+    border: none;
+      width: 50%;
+      padding: 0.8em 1em;
+      margin: 0.4em 0;
+      display: inline-block;
+      border-bottom: 1px solid #C4E3DB;
+      outline: none !important;
+      background-color: inherit;
+      font-family: 'Montserrat', sans-serif;
+      color: inherit;
+      /* font-weight: bold; */
+  }
+  
+  .register  button{
+    font-family: 'Montserrat', sans-serif;
+    margin: 2em auto;
+    width: auto;
+    display: block;
+    background-color: #58AF9B;
+    color: white;
+    padding: 0.7em 1em;
+    border: none;
+    border-radius: 2em;
+    cursor: pointer;
+    font-weight: bold;
+    box-shadow: 0.1em 0.3em 0.3em rgba(0,0,0,0.2);
+  } 
+  
+  .register .msg {
+    display: none;
+    width: 80%;
+    margin: -1em auto 1em;
+  }
+  .register .msg a{
+    color: #58AF9B;
+    text-decoration: none;
+  }
